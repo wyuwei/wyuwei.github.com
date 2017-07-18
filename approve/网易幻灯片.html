@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>幻灯片</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+#box{ width:700px; height:500px; background:#ccc; margin:50px auto; position:relative; overflow:hidden;}
+#box ul{ position:absolute; left:0; top:0;}
+#box ul li{ width:700px; height:500px; float:left; line-height:300px; text-align:center; font-size:50px; color:#fff; font-weight:bold; font-family:'微软雅黑';}
+#box ul li img{width:700px; height:500px;}
+#box ol{ position:absolute; width:430px; left:50%; margin-left:-215px; bottom:10px;}
+#box ol li{ width:80px; height:20px; background:#000; float:left; margin:3px; position:relative;}
+#box ol li span{ position:absolute; left:0; width:0px; background:#fff; top:0; height:100%;}
+</style>
+<script>
+function getStyle(obj,name){
+	return (obj.currentStyle||getComputedStyle(obj,false))[name];	
+}
+function move(obj,json,options){
+	var options=options||{};
+	options.duration=options.duration||500;
+	options.easing=options.easing||'ease-out';
+	
+	var start={};
+	var dis={};
+	
+	for(var name in json){
+		start[name]=parseFloat(getStyle(obj,name));
+		 dis[name]=json[name]-start[name];	
+	}
+	var count=Math.floor(options.duration/30);
+	var n=0;
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+		n++;
+		for(var name in json){
+			
+			switch(options.easing){
+				case 'linear':
+					var a=n/count
+					var cur=start[name]+(a)*dis[name];
+					break;
+				case 'ease-in':
+					var a=n/count
+					var cur=start[name]+(a*a*a)*dis[name];
+					break;
+				case 'ease-out':
+					var a=1-n/count
+					var cur=start[name]+(1-a*a*a)*dis[name];
+					break;	
+			}
+			if(name=='opacity'){
+				obj.style.opacity=cur;
+				obj.style.filter='alpha(opacity:'+cur*100+')';
+			}else{
+				obj.style[name]=cur+'px';		
+			}	
+		}
+		if(n==count){
+			clearInterval(obj.timer);
+			options.complete&&options.complete();
+		}
+	},30)
+		
+}
+</script>
+<script>
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var oUl=oBox.children[0];
+	var aLi=oUl.children;
+	var oOl=oBox.children[1];
+	var aBtn=oOl.children;
+	var aSpan=oOl.getElementsByTagName('span');
+	
+	oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+	
+	var n=0;
+	
+	function next(){
+		for(i=0;i<aSpan.length;i++){
+			aSpan[i].style.width=0;	
+		}
+		move(aSpan[n],{width:80},{complete:function(){
+			n++;
+			if(n==aSpan.length){
+				n=0;	
+			}
+			move(oUl,{left:-n*aLi[0].offsetWidth},{complete:next});	
+		}})	
+	}
+   next();
+};
+</script>
+</head>
+
+<body>
+<div id="box">
+	<ul>
+    	<li><img src="img/smls1.jpg"></li>
+        <li><img src="img/smls2.jpg"></li>
+        <li><img src="img/smls3.jpg"></li>
+        <li><img src="img/smls4.jpg"></li>
+        <li><img src="img/smls5.jpg"></li>
+    </ul>
+    <ol>
+    	<li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ol>
+</div>
+</body>
+</html>

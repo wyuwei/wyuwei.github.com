@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瑞丽手风琴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #ul1{
+            width: 1180px;
+            height: 405px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        #ul1 li{
+            width: 538px;
+            height: 405px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #ul1 li.bor-l{
+            border-left: 1px solid #000;
+        }
+        #ul1 .mask{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #000000;
+            z-index: 999;
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+    function getStyle(obj,name){
+        return (obj.currentStyle||getComputedStyle(obj,false))[name];   
+    }
+    function move(obj,json,options){
+        var options=options||{};
+        options.duration=options.duration||500;
+        options.easing=options.easing||'ease-out';
+        var start={};
+        var dis={};
+        for (var name in json) {
+            start[name]=parseFloat(getStyle(obj,name));
+            dis[name]=json[name]-start[name];
+        }
+        var count=Math.floor(options.duration/30);
+        var n=0;
+        clearInterval(obj.timer);
+        obj.timer=setInterval(function(){
+            n++;
+            for (var name in json) {
+                switch(options.easing){
+                    case 'linear':
+                    var a=n/count;
+                    var cur=start[name]+(a)*dis[name];
+                    break;
+                    case 'ease-in':
+                    var a=n/count;
+                    var cur=start[name]+(a*a*a)*dis[name];
+                    break;
+                    case 'ease-out':
+                    var a=1-n/count;
+                    var cur=start[name]+(1-a*a*a)*dis[name];
+                    break;
+                };
+                if(name=='opacity'){
+                    obj.style.opacity=cur;
+                    obj.style.filter='alpha(opacity:'+cur*100+')';
+                }else{
+                    obj.style[name]=cur+'px';
+                }
+            };
+            if(n==count){
+                clearInterval(obj.timer);
+                options.complete&&options.complete();
+            }
+        },30)
+    }
+    window.onload = function () {
+        var oUl=document.getElementById('ul1');
+        var aLi=oUl.children;
+        var aDiv=oUl.getElementsByTagName('div');
+        var w=106;
+        for (var i = 1; i < aLi.length; i++) {
+            aLi[i].style.left=oUl.offsetWidth-w*(aLi.length-i)+'px';
+        }
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index=i;
+            aLi[i].onmouseover=function(){
+                for (var i = 0; i < aLi.length; i++) {
+                    if(i<=this.index){
+                        move(aLi[i],{left:i*w});
+                        aDiv[i].style.opacity=0;
+                    }else{
+                        move(aLi[i],{left:oUl.offsetWidth-w*(aLi.length-i)});
+                        aDiv[i].style.opacity='0.3';
+                    }
+                }
+            };
+        }
+    };
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li style="z-index: 999;">
+            <img src="img/r0.jpg">
+            <div class="mask" style="opacity: 0;"></div>
+        </li>
+        <li style="z-index: 1000;" class="bor-l">
+            <img src="img/r1.jpg">
+            <div class="mask"></div>
+        </li>
+        <li style="z-index: 1001;" class="bor-l">
+            <img src="img/r2.jpg">
+            <div class="mask"></div>
+        </li>
+        <li style="z-index: 1002;" class="bor-l">
+            <img src="img/r3.jpg">
+            <div class="mask"></div>
+        </li>
+        <li style="z-index: 1003;" class="bor-l">
+            <img src="img/r4.jpg">
+            <div class="mask"></div>
+        </li>
+        <li style="z-index: 1004;" class="bor-l">
+            <img src="img/r5.jpg">
+            <div class="mask"></div>
+        </li>
+        <li style="z-index: 1005;" class="bor-l">
+            <img src="img/r6.jpg">
+            <div class="mask"></div>
+        </li>
+    </ul>
+</body>
+</html>

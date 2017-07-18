@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			width: 700px;
+			height: 400px;
+			margin: 40px auto;
+			transform-style: preserve-3d;
+			perspective: 800px;
+		}
+		img{
+			width: 700px;
+			height: 400px;
+		}
+
+		.block{
+			width: 100px;
+			height: 100px;
+			float: left;
+			position: relative;
+			transform-style: preserve-3d;
+		}
+
+		.front,.back{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.front{
+			z-index: 200;
+			backface-visibility: hidden;
+		}
+
+		.back{
+			z-index: 199;
+			transform: scale(-1,1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+	</div>
+	<script>
+		var oContainer = document.querySelector('.container');
+		var cols = 7;
+		var rows = 4;
+		var currentIndex = 0;
+
+		for( var row = 0; row < rows;row++ ){
+			for( var col = 0; col < cols; col++ ){
+				var oDiv = document.createElement('div');
+					oDiv.classList.add('block');
+
+				oDiv.dataset.col = col;
+				oDiv.dataset.row = row;
+
+				var oFront = document.createElement('div');
+					oFront.classList.add('front');
+
+					oFront.style.backgroundImage = `url(img/nature${currentIndex%6}.jpg)`
+
+					oFront.style.backgroundPosition = `${-col*100}px ${-row*100}px`
+
+				var oBack = document.createElement('div')
+					oBack.classList.add('back');
+
+					oBack.style.backgroundImage = `url(img/nature${(currentIndex+1)%6}.jpg)`
+
+					oBack.style.backgroundPosition = `${-col*100}px ${-row*100}px`
+
+
+				oDiv.appendChild(oFront);
+				oDiv.appendChild(oBack);
+
+				oContainer.appendChild(oDiv);
+			}
+		}
+
+		var aDiv = document.querySelectorAll('.block');
+
+		document.onclick = function(){
+			for (var i = 0; i < aDiv.length; i++) {
+				var col = aDiv[i].dataset.col;
+				var row = aDiv[i].dataset.row;
+				aDiv[i].style.transition = `1s ${(Number(col)+Number(row))*0.3}s`;
+				aDiv[i].style.transform = `rotateY(180deg)`;
+			}
+		}
+
+		aDiv[aDiv.length-1].addEventListener('transitionend',function(){
+			
+			currentIndex++;
+			for (var i = 0; i < aDiv.length; i++) {
+				aDiv[i].style.transition='';
+				aDiv[i].style.transform='';
+				var oFront = aDiv[i].children[0];
+				var oBack = aDiv[i].children[1];
+
+				oFront.style.backgroundImage = 'url(img/nature'+(currentIndex%6)+'.jpg)';
+				oBack.style.backgroundImage = 'url(img/nature'+((currentIndex+1)%6)+'.jpg)';
+			}
+		},false)
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
