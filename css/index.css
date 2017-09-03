@@ -98,6 +98,7 @@ nav dl dd, nav dl dt {
     line-height: 50px;
 }
 
+
 nav dl a {
     display: inline-block;
     height: inherit;
@@ -412,10 +413,12 @@ nav dl dt.logo {
 
 .btn_group .btn_prev {
     float: left;
+    cursor: pointer;
 }
 
 .btn_group .btn_next {
     float: right;
+    cursor: pointer;
 }
 
 /* 个性案例 */

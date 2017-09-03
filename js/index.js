@@ -29,7 +29,7 @@
 	 $('.icon').mouseenter(function () {
 	 	$(this).find('div').css({display:'block', 'opacity':'0'}).stop().animate({'opacity':'1'}, 1000);
 	 });
-	 
+
 
 
 	 function showSideBar(){
@@ -78,7 +78,7 @@
 
 
 	 //返回顶部   导航吸顶
-	 $(window).on('scroll',function(){ 	
+	 $(window).on('scroll',function(){
 
  	    var top = $(window).scrollTop();
 	 	// if($(window).scrollTop() > $(window).height()){
