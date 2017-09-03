@@ -1,37 +1,137 @@
-## Welcome to GitHub Pages
+## 个人简历
 
-You can use the [editor on GitHub](https://github.com/wyuwei/wyuwei.github.com/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+------
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 个人信息
 
-### Markdown
+- 王雨微/女/1991
+- 本科
+- 工作年限：2年
+- 个人介绍：https://wyuwei.github.io/
+- 期望职位：Web前端工程师
+- 期望城市：北京
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+------
 
-```markdown
-Syntax highlighted code block
+### 联系方式
 
-# Header 1
-## Header 2
-### Header 3
+- 手机：13681867478 
+- Email：wyuwei404@gmail.com
+- QQ/微信号：675295811
 
-- Bulleted
-- List
+### 工作经历
 
-1. Numbered
-2. List
+#### 上海冰橙网络技术有限公司 (2014年10月 ~ 2017年5月 )
 
-**Bold** and _Italic_ and `Code` text
+公司简介：冰橙网络有限公司属于一家中小型民营企业，现主要从事互联网教育工作。此外，兼外包各类Web前端服务的技术服务型公司。从实习到现在我在冰橙网络已两年多时间了，在公司我主要负责：
 
-[Link](url) and ![Image](src)
-```
+- 根据公司要求与UI提供的设计图，实现公司各项目的web页面前端开发；
+- 在静态页面中，加上javaScript，与HTML5和CSS3，使页面更生动，更具良好的用户体验；
+- 优化代码并保持在各浏览器下具备良好的兼容性；
+- 配合后端人员完成前端数据的呈现。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 工作项目
 
-### Jekyll Themes
+##### 博思中国	 (2017年4月 -- 2017年5月)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wyuwei/wyuwei.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+##### 网址：http://bosi.ppjd.cn/    微官网：http://web-bosi.ppjd.cn
 
-### Support or Contact
+本项目受博思委托，作为博思中国公司的官网介绍，主要涵盖关于博思、博思会员、博思房产、博思云旅、博思e家、博思金融、博思动态和用户登录等8个页面。
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- 前期运用HTML+CSS精确地搭建页面框架、利用HTML5、CSS3丰富页面效果；
+- 运用Swiper实现PC端和移动端的tab动态切换，使页面更加丰富，增强用户体验；
+- 后期页面性能优化与调整。
+
+------
+
+##### IS YOU  		(2015年3月-- 2016年7月)
+
+Is you 是公司推出的你问我答型App。用户可在问答区对感兴趣的话题进行讨论，也可在达人区查看精选分享。是集快乐问答与任性分享为一体的爱学习App。
+
+- App的日常维护与bug修复；
+- 新增消息模块的页面搭建与性能调试；
+- 与后台对接配合进行数据交互。
+
+------
+
+##### 高孚体育GJT赛事 (2016年6月 -- 2016年11月)
+
+##### 网址：http://www.caiyunzou.com/website/gaofu/
+
+高孚泛亚体育发展有限公司是一家从事青少年高尔夫运动推广的公司，这是受高孚体育委托的线上项目之一，项目包含PC端和移动端两部分。旨在展示此次的高孚体育GJT赛事，并给予赛事全程计划报道、相关赞助、文化与公益、培训与全球职业路径规划等多个部分进行相关宣传介绍。可以从PC端和移动端对高孚体育GJT赛事及报名方式进行了解。此次活动从五月份开始至十一月份结束。
+本项目相关技术简介：
+
+- 前期运用HTML+CSS进行静态页面搭建；
+- 运用JS操作，大量的选项卡和定时器结合，并利用jquery库给页面添加出动态效果，使得页面效果更加丰富，更具良好的用户体验； 
+- 利用swiper实现移动端的tab动态切换；
+- 根据赛事进程及时从后台数据库中更新相关报道及数据。
+
+------
+
+##### 长安福特汽车 (2016年7月 -- 2016年9月)
+
+##### 网址：http://www.racing.allyes.com/
+
+这是长安福特汽车CTCC赛事的线上项目，项目包括PC端和移动端两部分。旨在介绍CTCC项目、2016长安福特车队介绍、赛车文化、长安福特技术，并对赛况进行报道。
+  职责介绍：
+
+- 前期html+css静态页面搭建
+- 利用jquery添加动态效果使得页面效果更丰富
+- 利用swipe库实现页面中各个选项卡效果
+- 根据比赛进程从后台数据库mysql取数据更新页面
+
+------
+
+##### 智星恒通科技有限公司 (2015年12月 -- 2016年2月)
+
+##### 网址：http://www.caiyunzou.com/website/intellistar/
+
+本项目受智星恒通科技有限公司委托，作为智星恒通科技的官网介绍，主要涵盖主页、公司简介、Nutanix超融合、IT解决方案、IT技术服务、合作产商、无线射频RFID以及成功案例八个部分的页面。
+本项目技术简介：				
+
+- 前期运用html+css搭建出首页静态效果，之后分别添加七个分页面，整合链接；
+- 添加动态效果，运用jquery库分别在导航区、内容区添加选项卡、定时器、渐入渐出效果，给页面添加更好的视觉观感；
+- 页面性能优化。
+
+------
+
+### 个人作品
+
+#### Vue: 外卖APP
+
+上班时一直听闻Vue是多么轻便可爱，抱着极大的热情在网上认真学习并完成了自己第一个Vue小demo，对Vue有了初步的认识。demo中使用Eslint代码检测，虽然bug不断，但是有利于日后以正确的姿势书写代码。组件化开发，便于重用，打包以后更轻巧 : )
+
+##### 工具&技能
+
+技术框架：Vue-cli  +  Vue-Resource  +  Vue Router
+技术语言：HTML + Stylus + ES6 
+技术支持：Eslint + Babel
+构建工具：Webpack 2.x
+移动端滚动库：better-scroll
+
+##### 实现页面
+
+- 商品列表页：使用better-scroll实现页面滚动，菜单与商品有联动效果；
+- 商品详情页：渐变效果，增强用户体验。在vue里animate动画实现起来更加简单；
+- 购物车弹层：增加商品使用贝塞尔曲线实现小球掉落效果，让应用更活泼；
+- 商品评论页：使用Vue里计算属性，根据用户需求切换评论详情；
+- 商家详情页：运用HTML5里window.localStorage方法判断店铺是否收藏。
+
+------
+
+### 技能清单
+
+- 基本技能：HTML5/CSS3/JavaScript/jQuery/ES6
+- 前端框架：Bootstrap/Vue
+- 前端工具：Bower/Npm
+- 数据库相关：MySQL
+- 数据交互：Ajax/JSONP
+- 版本管理、文档和自动化部署工具：Svn/Git
+- 移动端库：Zepto/iScroll/Swiper等
+- 熟悉W3C标准，对浏览器兼容性和网页优化有一定的理解
+
+------
+
+### 致谢
+
+感谢您花时间阅读我的简历，期待能有机会和您共事。
