@@ -53,7 +53,7 @@
 	 })
 
 	 //轮播图
-	  let oBtnPrev=document.getElementById('btn_prev');
+	  	let oBtnPrev=document.getElementById('btn_prev');
       let oBtnNext=document.getElementById('btn_next');
       let aList=document.getElementById('ul1').children;
       let aClass=[];

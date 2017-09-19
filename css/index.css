@@ -1,24 +1,7 @@
+/*common st*/
 h1, h2, h3, h4, h5, h6 {
     line-height: 100%;
     margin: 0;
-}
-
-.fl {
-    float: left;
-}
-
-.fr {
-    float: right;
-}
-
-.clearFix:after {
-    display: block;
-    content: '';
-    clear: both;
-}
-
-.clearFix {
-    zoom: 1
 }
 
 a {
@@ -34,6 +17,23 @@ h1 {
     padding: 12px;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+}
+
+.fl {
+    float: left;}
+
+.fr {
+    float: right;
+}
+
+.clearFix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.clearFix {
+    zoom: 1
 }
 
 .article h1 {
