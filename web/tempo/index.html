@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>转角遇到新Tempo</title>
+    <meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no"/>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="assets/js/libs/jquery-1.7.2.min.js"></script>
+    <script src="assets/js/libs/create.js"></script>
+    <script src="assets/js/libs/soundjs-0.6.1.min.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?195763b8def7cc6b357c12773bfbf220";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+</head>
+<body>
+<div id="music">
+    <div class="music"></div>
+    <span>开启</span>
+</div>
+<div class="index" id="index">
+    <div class="index-top">
+        <img src="assets/images/index-top.png" width="400" >
+    </div>
+    <div class="begin">
+        <img class="begin-pc" width="100%" src="assets/images/begin.png">
+        <div class="begin-bt"></div>
+    </div>
+    <div class="index-gif">
+        <img class="loading-gif" width="400" src="assets/loading.gif">
+    </div>
+    <div class="pro-txt progress">0%</div>
+    <div class="pro-txt progress-load">loading</div>
+</div>
+<div class="notice">
+    <img src="assets/images/notice.png" alt="" />
+</div>
+<div class="panorama" id="stage">
+    <div class="panorama-view" id="view">
+        <div class="panorama-container">
+            <div class="pbg">
+                <img src="assets/images/cloud.png" usemap="hotspots" data-width="5761" data-height="1200" alt="Panorama"/>
+            </div>
+            <div id="img-box4">
+                <img src="assets/images/front.png"/>
+            </div>
+            <map id="hotspots" name="hotspots">
+                <area shape="rect" coords="1232,520,100,100" href="#" data-id="qxmlh" alt="清新茉莉花"/>
+                <area shape="rect" coords="4335,738,100,100" href="#" data-id="mmxxg" alt="曼妙香薰果"/>
+                <area shape="rect" coords="1942,640,160,160" href="#" data-id="kxpgm" alt="开心苹果木"/>
+                <area shape="rect" coords="3410,788,100,100" href="#" data-id="camt" alt="宠爱蜜桃"/>
+                <area shape="rect" coords="3936,834,120,120" href="#" data-id="txcm" alt="甜心草莓"/>
+                <area shape="rect" coords="2212,615,280,280" href="#" data-id="xsbbh" alt="醒神冰薄荷"/>
+                <area shape="rect" coords="610,440,100,100" href="#" data-id="zxwx" alt="自信无香"/>
+            </map>
+        </div>
+    </div>
+</div>
+<div id="tip" class="info"></div>
+<div id="layer"></div>
+<div id="find_icon"></div>
+<div id="find">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div id="findAll"></div>
+
+<div id="result">
+    <div class="paper">
+            <i class="paper1"></i>
+            <i class="paper2"></i>
+            <i class="paper3"></i>
+            <i class="paper4"></i>
+            <div class="paper_line2">
+                <i class="paper5"></i>
+                <i class="paper6"></i>
+                <i class="paper7"></i>
+            </div>
+    </div>
+    <div class="zhong">
+        <img src="assets/images/zhong.png">
+        <div class="sharebt"></div>
+        <div class="erweima">
+            <img src="assets/images/erweima.jpg" alt="" />
+        </div>
+        
+        <div class="contribute">恭喜中奖啦!</div>
+    </div>
+    
+    <div class="meiz">
+        <img src="assets/images/meiz.png">
+        <div class="sharebt"></div>
+        <div class="replaybt"></div>
+    </div>
+    <div id="share">
+        <img src="assets/images/share-tip.png">
+        <div class="share-txt">
+            有实力寻宝，有运气得奖，好事不能独享，<br>
+            快邀请亲朋友好友一同加入寻“宝”大军吧！
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    /* 样式放在结尾，防止 base64 图片造成拥塞 */
+    @-webkit-keyframes rotation {
+        10% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+        50%, 60% { transform: rotate(0deg); -webkit-transform: rotate(0deg) }
+        90% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+        100% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+    }
+    @keyframes rotation {
+        10% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+        50%, 60% { transform: rotate(0deg); -webkit-transform: rotate(0deg) }
+        90% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+        100% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }
+    }
+    #orientLayer { display: none; }
+    @media screen and (min-aspect-ratio: 13/9) { #orientLayer { display: block; } }
+    .mod-orient-layer { display: none; position: fixed; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 9999; }
+    .mod-orient-layer__content { position: absolute; width: 100%; top: 45%; margin-top: -75px; text-align: center }
+    .mod-orient-layer__icon-orient {background-image: url('assets/images/turn.png');display: inline-block; width:49px; height:53px;
+       /* transform: rotate(90deg); -webkit-transform: rotate(90deg); -webkit-animation: rotation infinite 1.5s ease-in-out; animation: rotation infinite 1.5s ease-in-out;*/  }
+    .mod-orient-layer__desc { margin-top: 20px; font-size: 15px; color: #000; }
+</style>
+<!--DOM在CSS后避免reflow-->
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">旋转竖屏观看更好</div>
+    </div>
+</div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript">
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://www.evener.com/bo/jsphp/wx.php?url=" + encodeURIComponent(location.href.split('#')[0]);
+    document.getElementsByTagName('head')[0].appendChild(script); 
+</script>
+</html>
