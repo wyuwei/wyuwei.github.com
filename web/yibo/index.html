@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title>铿锵玫瑰 放手一搏</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="prefetch" href="http://m.ecosport.allyes.com/china-football/images/1.mp4" />
+    <link rel="prefetch" href="http://m.ecosport.allyes.com/china-football/images/2.mp4" />
+    <script src="http://www.datacenter.ford.com.cn/source/selectarea.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="loading">
+        <img src="images/icon.jpg" width="1" height="1" alt="" >
+        <div class="load_content">
+            <img src="images/loading.gif" alt="" />
+        </div>
+    </div>
+    <div class="video_first">
+        <video src="images/1.mp4"  x-webkit-airplay="true" webkit-playsinline="true" width="100%"></video>
+    </div>
+    <div class="imgbox">
+        <div class="long_imgbox">
+            <img src="images/bg.jpg" alt="" />
+            <i class="video_btn"></i>
+            <div class="player_girl"></div>
+            <div class="notice_icon">
+                <div class="hand"></div>
+            </div>
+            <div class="intro_wang">
+                <p class="intro_name"></p>
+                <p class="intro_position"></p>
+                <p class="inner_2"></p>
+                <p class="inner_3"></p>
+                <!--场上位置：前锋<br/>
+                参加国家队比赛场次：44<br/>
+                俱乐部：大连权健-->
+            </div>
+            <div class="against">放手一搏</div>
+        </div>
+    </div>
+    <div class="turn_pos active">
+        <div class="turn_content">
+            <img src="images/phone.png" alt="" />
+            <p>切换横屏效果更佳</p>
+        </div>
+    </div>
+    <div class="video_box">
+        <video class="video" src="images/2.mp4" width="100%" x-webkit-airplay="true" webkit-playsinline="true" ></video>
+    </div>
+    <div class="last_content">
+        <div class="bottom_btns clearFix">
+            <div class="fl film_btn">
+                <img src="images/png/1.png" alt="" />
+                <span>观看视频</span>
+            </div>
+            <div class="fr gift_btn">
+                <img src="images/png/1.png" alt="" />
+                <span>申领限量礼品</span>
+            </div>
+        </div>
+        <div class="black_bg"></div>
+    </div>
+    <div class="gift_box">
+        <div class="close"></div>
+        <form>
+            <div class="form_content">
+                <p>助威里约奥运，预留个人信息，赢取中国女足限量大礼！</p>
+                <div class="form_input form_name">
+                    <input type="text" name="name" />
+                    <span>姓名</span>
+                </div>
+                <div class="form_input form_phone">
+                    <input type="text" name="phone" maxlength="11" />
+                    <span>电话</span>
+                </div>
+                <div class="form_select clearFix">
+                    <div class="form_sheng fl">
+                        <select id="province">
+                            <option>省份</option>
+                        </select>
+                        <i></i>
+                    </div>
+                    <div class="form_city fr">
+                        <select id="city">
+                            <option>城市</option>
+                        </select>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="submit_btn">提 &nbsp; 交</div>
+                <p>活动时间: 即日起至2016年8月21日</p>
+                <p>奖项设置: 精美福特翼搏车模(共20台)，奥运会女足限量版签名足球(共20个)。</p>
+            </div>
+        </form>
+    </div>
+    <div class="film_box">
+        <div class="close"></div>
+        <div class="film_video">
+            <video src="images/ford.mp4" height="100%" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" poster="images/last_video.jpg"></video>
+            <div class="film_playbtn"></div>
+        </div>
+    </div>
+    <audio class="heart" src="images/heart.mp3" loop></audio>
+    <audio class="music" src="images/music.mp3" loop></audio>
+    <audio class="cheer" src="images/cheer.mp3" loop></audio>
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62038059-32', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+var rem = 100;
+window.onload =window.onresize= function () 
+{
+    rem = document.documentElement.clientWidth / 320 * 50;
+    document.documentElement.style.fontSize = rem + 'px';
+    $('.loading').hide();
+    if($(window).width()>$(window).height())
+    {
+        $('.turn_pos').removeClass('active');
+    }
+};
+</script>
+</html>

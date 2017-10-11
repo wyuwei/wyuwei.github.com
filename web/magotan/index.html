@@ -1,0 +1,277 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>一汽大众－迈腾</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/video-js.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script src="js/video.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4def65b89aa6c6d59a9f9bcc790f254e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+	videojs.options.flash.swf = "js/video-js.swf";
+</script>
+
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1 class="clearFix">
+			<a class="fl logo_left" href="javascript:;">
+				<img src="images/logo_left.png" alt="" />
+			</a>
+			<a class="fr logo_right" href="javascript:;">
+				<img src="images/logo_right.png" alt="" />
+			</a>
+		</h1>
+	</div>
+	<div class="banner">
+		<a href="http://vw.faw-vw.com/newmagotan">
+			<img src="images/banner.jpg" alt="" />
+		</a>
+	</div>
+	<div class="little_pic" id="little_pic">
+		<div class="little_pictures">
+			<div id="little_ul" class="little_ul clearFixs">
+				<ul class="clearFix">
+					<li>
+						<img src="images/little_pic1.jpg" alt="" />
+						<p>全新MQB—B平台</p>
+					</li>
+					<li>
+						<img src="images/little_pic2.jpg" alt="" />
+						<p>MKB多次碰撞预防系统</p>
+					</li>
+					<li>
+						<img src="images/little_pic3.jpg" alt="" />
+						<p>PLA3.0自动泊车</p>
+					</li>
+					<li>
+						<img src="images/little_pic4.jpg" alt="" />
+						<p>分区空调</p>
+					</li>
+				</ul>
+				<ul class="clearFix">
+					<li>
+						<img src="images/little_pic5.jpg" alt="" />
+						<p>集控式三幅真皮多功能方向盘</p>
+					</li>
+					<li>
+						<img src="images/little_pic6.jpg" alt="" />
+						<p>宽大车内乘坐空间</p>
+					</li>
+					<li>
+						<img src="images/little_pic7.jpg" alt="" />
+						<p>多功能电动外后视镜</p>
+					</li>
+					<li>
+						<img src="images/little_pic8.jpg" alt="" />
+						<p>超大全景天窗</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a class="prev little_btns" href="javascript:;"></a>
+		<a class="next little_btns" href="javascript:;"></a>
+	</div>
+	<div class="video_area clearFix">
+		<div class="video_box fl" id="videos_box">
+			<div class="video_hidden">
+				<div id="videos" class="videos clearFix">
+					<div class="fl one_video">
+						<video id="example_video_1" class="play video-js vjs-default-skin" controls preload="none" width="564" height="361" poster="images/poster.jpg" data-setup="{}" autoplay>
+							<source src="images/magotan.mp4" type='video/mp4' />
+							<track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track>
+							<track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track>
+						</video>
+						<img class="poster" src="images/poster.jpg" alt="" />
+					</div>
+					<!-- <div class="fl one_video">
+						<video id="example_video_2" class="play video-js vjs-default-skin" controls preload="none" width="564" height="361" poster="images/big_pic3.jpg" data-setup="{}">
+							<source src="images/1.mp4" type='video/mp4' />
+							<track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track>
+							<track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track>
+						</video>
+					</div> -->
+				</div>
+			</div>
+			<!-- <video width="564" height="361" controls>
+				<source src="images/1.mp4" type='video/mp4' />
+			</video> -->
+			<a class="prev little_btns" href="javascript:;"></a>
+			<a class="next little_btns" href="javascript:;"></a>
+		</div>
+		<div class="form_box fl">
+			<div class="order_tit"></div>
+			<form class="clearFix" id="form">
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">姓</span>
+					<span class="fl text_indent">名：</span>
+					<input class="fl" type="text" name="name" placeholder="请输入姓名" maxlength="5" />
+					<i class="notice_text"></i>
+				</div>
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">手</span>
+					<span class="fl text_indent">机：</span>
+					<input class="fl" type="text" name="phone" maxlength="11" placeholder="请输入手机号" />
+					<i class="notice_text"></i>
+				</div>
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">省</span>
+					<span class="fl text_indent">份：</span>
+					<div class="fl select_box">
+						<select id="province" name="province">
+							<option>北京</option>
+						</select>
+						<span class="center_text province_text">请选择省份</span>
+					</div>
+					<i class="notice_text"></i>
+				</div>
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">城</span>
+					<span class="fl text_indent">市：</span>
+					<div class="fl select_box">
+						<select id="city" name="city">
+							<option>北京</option>
+						</select>
+						<span class="center_text city_text">请选择城市</span>
+					</div>
+					<i class="notice_text"></i>
+				</div>
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">经</span>
+					<span class="fl text_three">销</span>
+					<span class="fl">商：</span>
+					<div class="fl select_box">
+						<select id="dealer" name="dealer">
+							<option>经销商</option>
+						</select>
+						<span class="center_text dealer_text">请选择经销商</span>
+					</div>
+					<i class="notice_text"></i>
+				</div>
+				<div class="form_enter clearFix fl">
+					<i class="fl">＊</i>
+					<span class="fl">意向车型：</span>
+					<div class="fl select_box">
+						<select class="fl" id="wantcar" name="wantcar">
+							<option>全新一代迈腾</option>
+						</select>
+						<span class="center_text wantcar_text">全新一代迈腾</span>
+					</div>
+				</div>
+				<div class="submit fr">确认提交</div>
+			</form>
+		</div>
+	</div>
+	<!-- <div class="news">
+		<div class="news_car">
+			<img src="images/news_car.png" alt="" />
+		</div>
+		<div class="news_content">
+			<div class="news_tit"></div>
+			<div class="news_number">
+				<div class="news1 clearFix">
+					<a href="http://vw.faw-vw.com/trydrive/17571" target="_blank">
+						<div class="fl news_word">
+							<h3>一汽-大众携全系车型亮相长春车展 倾情演绎下半年“开幕大秀”</h3>
+							<p>7月15日，以“智能汽车·改变生活”为主题的第十三届中国长春国际汽车博览会在长春国际会展中心拉开序幕。 坐拥主场优势的一汽-大众携旗下全系高品质车型震撼亮相，包括捷达、全新宝来、全新一代迈腾、CC、全新高尔夫家族、速腾家族，以及25周年纪念版车型，阵容豪华抢眼，尽现长春车展“东道主”的风采。</p>
+						</div>
+						<div class="fl">
+							<img src="images/news1_img.jpg" alt="" />
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div id="big_pic" class="big_pic">
+		<div class="big_pic_area">
+			<div id="big_pic_content" class="big_pic_content clearFix">
+				<ul class="clearFix fl">
+					<li>
+						<img src="images/big_pic1.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic2.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic3.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic4.jpg" alt="" />
+					</li>
+				</ul>
+				<ul class="clearFix fl">
+					<li>
+						<img src="images/big_pic5.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic6.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic7.jpg" alt="" />
+					</li>
+					<li>
+						<img src="images/big_pic8.jpg" alt="" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a class="prev little_btns" href="javascript:;"></a>
+		<a class="next little_btns" href="javascript:;"></a>
+	</div>
+</div>
+<div id="show_little" class="show_picture">
+	<div class="show_picture_area">
+		<div class="show_picture_box">
+			<img id="show_little_image" src="images/big_detail_pic1.jpg" alt="" />
+			<a class="show_prev" href="javascript:;"><b class="prev little_btns"></b></a>
+			<a class="show_next" href="javascript:;"><b class="next little_btns"></b></a>
+		</div>
+		<div class="clearFix show_picture_bottom">
+			<span class="fl images_text">Images 2 of 8</span>
+			<i class="fr close"></i>
+		</div>
+	</div>
+</div>
+<div id="show_Big" class="show_picture">
+	<div class="show_picture_area">
+		<div class="show_picture_box">
+			<img id="show_little_image" src="images/big_detail_pic1.jpg" alt="" />
+			<a class="show_prev" href="javascript:;"><b class="prev little_btns"></b></a>
+			<a class="show_next" href="javascript:;"><b class="next little_btns"></b></a>
+		</div>
+		<div class="clearFix show_picture_bottom">
+			<span class="fl images_text">Images 2 of 8</span>
+			<i class="fr close"></i>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

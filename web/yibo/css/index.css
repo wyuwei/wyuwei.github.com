@@ -1,0 +1,146 @@
+@charset "utf-8";
+*{ margin:0; padding:0; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+img{ border:0; vertical-align:top; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; display:block; clear:both; }
+textarea,input,select{ outline:none; vertical-align:top; resize:none; }
+html,body{ width:100%; height:100%; }
+html{ font-size:50px; }
+body{ font-family:"Microsoft YaHei",Arial; -webkit-tap-highlight-color:rgba(255,255,255,0); }
+
+
+/*-------------------------------------*/
+
+/* loading */
+.loading{ width:100%; height:100%; position:fixed; top:0; left:0; background:#000; z-index:100; }
+.load_content{ position:absolute; top:50%; left:50%; width:4rem; height:0.6rem; margin-top:-0.3rem; margin-left:-2rem; }
+.load_content img{ width:100%; height:100%; }
+
+
+.video_first{ width:100%; height:100%; position:absolute; top:0; left:0; z-index:4; overflow: hidden; background:#000; }
+.imgbox{ width:100%; height:100%; overflow:hidden; position:relative; transform-style:preserve-3d; -webkit-transform-style:preserve-3d; z-index:3; top:0; left:0; display: none; }
+.long_imgbox{ height:100%; position:absolute; top:0; left:-4.80rem; }
+.long_imgbox img{ height:100%; }
+.video_btn{ width:1.2rem; height:2.00rem; position:absolute; top:0.50rem; left:1.80rem; z-index:2; }
+.notice_icon{ position:absolute; top:1.6rem; left:1.7rem; display:none; color:#fff; font-size:0.12rem; }
+.hand{ width:0.6rem; height:0.4rem; background:url(../images/hand.gif) no-repeat; background-size:100%; }
+.video_box{ width:100%; height:100%; position:absolute; top:0; left:0; z-index:2; overflow:hidden; visibility:hidden; background:#000; }
+.intro_wang{ width:2rem; height:0.9rem; background:url(../images/wang_bg.png) no-repeat; background-size:100%; position:absolute; top:0.7rem; left:2.3rem; }
+.intro_wang p{ font-size:0.11rem; color:#adddff; margin-left:0.55rem; line-height:0.16rem; }
+.intro_wang .intro_name{ font-size:0.18rem; margin:0.15rem 0 0.04rem 0.55rem }
+.intro_wang .intro_position{ font-size:0.13rem; }
+.against{ font-size:0.2rem; width:2rem; text-align:center; height:0.5rem; line-height:0.5rem; background:url(../images/name_bg.png) no-repeat; background-size:100%; position:absolute; top:1.1rem; left:2.3rem; color:#adddff; display:none; }
+.player_girl{ width:0.6rem; height:1.8rem; background:url(../images/player.png) no-repeat; background-size:100%; position:absolute; bottom:0.73rem; left:2.2rem; }
+/* last */
+.last_content{ width:100%; height:100%; position:absolute; top:0; left:0; overflow:hidden; background:url(../images/last_page.jpg) no-repeat; background-size:100%; display:none; }
+.players{ width:2.495rem; position:absolute; bottom:0; left:0.11rem; }
+.players img,.text img,.car img{ width:100%; height:100%; }
+
+
+.players_name{ position:absolute; bottom:0.6rem; left:0.1rem; font-size:0.12rem; color:#fff; text-align:center; }
+.players_name div{ width:0.7rem; height:0.16rem; background:url(../images/name_bg.png) no-repeat; background-size:100%; }
+.players_name .xue{ margin-left:-0.15rem; }
+.text{ width:2rem; position:absolute; top:0.15rem; left:2.12rem; }
+.car{ width:4.35rem; position:absolute; bottom:0; right:0; }
+.bottom_btns{ position:absolute; width:4rem; margin-left:-2rem; bottom:0.25rem; left:50%; font-size:0.14rem; line-height:0.4rem; }
+.bottom_btns div{ width:2rem; height:0.35rem; /*background:url(../images/btn_bg.png) no-repeat; background-size:100%;*/ text-align:center; overflow:hidden; color: #fff; position:relative; top:0; left:0; }
+.bottom_btns div img{ position:absolute; top:-0.15rem; left:-1.2rem; width:200%; }
+.bottom_btns div span{ position:absolute; top:0; left:0; text-align:center; width:100%; }
+.last_content.active{ -webkit-filter:blur(0.02rem);filter:blur(add=0,direction=0,strength=30); }
+.last_content.active .black_bg{ display:block; }
+/* 留资 */
+.gift_box{ background:rgba(9,43,70,0.9); width:5rem; height:2.8rem; position:fixed; z-index:9; top:50%; left:50%; margin-top:-1.4rem; margin-left:-2.5rem; display:none; }
+.close{ width:0.25rem; height:0.25rem; position:absolute; top:0; right:0; background:url(../images/close.png) no-repeat; background-size:100%; z-index:2; }
+form{ width:4.4rem; margin:0.15rem auto 0; }
+.form_content{ color:#fff; font-size:0.14rem; }
+.form_content p{ font-size:0.12rem; }
+input,select,.submit_btn{ text-align:center; -webkit-appearance:none; appearance:none; -moz-appearance:none; -ms-appearance:none; width:3.6rem; height:0.3rem; line-height:0.3rem; background:#051224; border:1px solid #66ceff; box-shadow:inset 0 0 0.1rem #9bddff; color:#6cf; text-shadow:0 0 0.03rem #00a9ff; border-radius:0.02rem; font-size:0.14rem; }
+.form_input{ width:3.62rem; height:0.32rem; text-align:center; overflow:hidden; margin:0.155rem auto; position:relative; top:0; left:0; }
+.form_input span{ position:absolute; top:0; left:0; width:100%; height:100%; text-align:center; color:#6cf; text-shadow:0 0 0.03rem #00a9ff; line-height:0.315rem; }
+.submit_btn{ width:3.62rem; margin:0.155rem auto; background:rgba(16,91,168,0.6); }
+select{ width:1.74rem; text-indent:5em; }
+.form_select{ width:3.62rem; margin:0.155rem auto;}
+.form_sheng,.form_city{ position:relative; top:0; left:0; }
+.form_sheng i,.form_city i{ position:absolute; right:0.1rem; top:0.12rem; background:url(../images/arrow.png) no-repeat; background-size:100%; width:0.15rem; height:0.1rem; }
+/* 视频 */
+.film_box{ width:5rem; height:2.8rem; position:fixed; z-index:9; top:50%; left:50%; margin-top:-1.4rem; margin-left:-2.5rem; background:#000; display:none; }
+.film_video{ width:100%; height:100%; text-align:center; overflow:hidden; position:relative; top:0; left:0; }
+.film_playbtn{ width:0.8rem; height:0.8rem; background:url(../images/play.png) no-repeat; background-size:100%; position:absolute; top:50%; left:50%; margin-top:-0.4rem; margin-left:-0.4rem; }
+.black_bg{ width:100%; height:100%; background:rgba(0,0,0,0.6); position:absolute; top:0; left:0; display:none; }
+
+
+/* 横屏提示层 */
+.turn_pos{ width:100%; height:100%; background:#000; position:fixed; z-index:99; display:none; top:0; left:0; color:#fff; text-align:center; line-height:0.30rem; font-size:0.24rem; }
+.turn_content{ width:4.00rem; height:2.50rem; position:absolute; top:50%; left:50%; margin-top:-1.25rem; margin-left:-2.00rem; }
+.turn_pos img{ width:0.6rem; margin-bottom:0.30rem; }
+.turn_pos.active{ display:block; }
+.turn_pos.active img{ animation:rotate 1.5s ease-in-out infinite; -webkit-animation:rotate 1.5s ease-in-out infinite; -moz-animation:rotate 1.5s ease-in-out infinite; -ms-animation:rotate 1.5s ease-in-out infinite; }
+@keyframes rotate
+{
+    0%{
+        -webkit-transform:rotate(0);
+        transform:rotate(0);
+        -moz-transform:rotate(0);
+        -ms-transform:rotate(0);
+    }
+    50%{
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
+   100%{
+        -webkit-transform:rotate(0);
+        transform:rotate(0);
+        -moz-transform:rotate(0);
+        -ms-transform:rotate(0);
+    }
+}
+@-webkit-keyframes rotate
+{
+    0%{
+        -webkit-transform:rotate(0);
+        transform:rotate(0);
+        -moz-transform:rotate(0);
+        -ms-transform:rotate(0);
+    }
+    50%{
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
+   100%{
+        -webkit-transform:rotate(0);
+        transform:rotate(0);
+        -moz-transform:rotate(0);
+        -ms-transform:rotate(0);
+    }
+}
+
+
+
+@-webkit-keyframes float
+{
+    0%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+    }
+    50%{
+    	-webkit-transform:translateY(0.1rem);
+        transform:translateY(0.1rem);
+        -moz-transform:translateY(0.1rem);
+        -ms-transform:translateY(0.1rem);
+    }
+   100%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+	}
+}

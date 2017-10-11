@@ -1,0 +1,277 @@
+/*第一屏 */
+.first-info{
+  transition: all 1s;
+}
+
+.first-img-1,
+.first-img-2{
+  transition: all 1s .5s;
+}
+
+.first-info-init,
+.first-img-2-init{
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.first-img-1-init{
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.first-img-1-done,
+.first-img-2-done,
+.first-info-done{
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/*第二屏 */
+.second-title,
+.second-info-1,
+.second-info-2,
+.second-img{
+  transition: all 1s;
+}
+
+.second-point{
+  transition: all 2s 1s;
+}
+
+.second-point:before,
+.second-point:after{
+  display: block;
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-color: rgba(255,0,0,.2);
+  z-index: 3;
+  animation: pointScale 2s infinite;
+}
+
+.second-point:after{
+  animation: pointScale 2s infinite 1s;
+}
+
+.second-point-2::before,
+.second-point-2::after{
+  left: 90%;
+}
+
+@keyframes pointScale {
+  0%,100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.second-point-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.second-point-1-init, .second-point-3-init{
+  opacity: 0;
+  transform: translate(500%, 0);
+}
+
+.second-point-2-init{
+  opacity: 0;
+  transform: translate(-500%, 0);
+}
+
+.second-img-init{
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.second-title-init,
+.second-info-2-init{
+  opacity: 0;
+  transform: translate(0 ,-100%);
+}
+
+.second-info-1-init
+{
+  opacity: 0;
+  transform: translate(0 ,100%);
+}
+
+.second-title-done,
+.second-info-1-done,
+.second-info-2-done,
+.second-img-done,
+.second-point-1-done,
+.second-point-2-done,
+.second-point-3-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*第三屏 */
+.third-title,
+.third-info-1,
+.third-info-2,
+.third-img,
+.third-screen-feature{
+  transition: all 1s;
+}
+
+.third-info-1-init,
+.third-info-2-init,
+.third-title-init
+{
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+
+.third-img-init{
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.third-title-done,
+.third-info-1-done,
+.third-info-2-done,
+.third-img-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.third-screen-feature-init{
+  opacity: 0;
+  transform: scale(.5);
+}
+
+.third-screen-feature-done{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.third-feature-item{
+  transition: all .5s;
+  transform: scale(1);
+}
+
+.third-feature-item:hover{
+  transform: scale(1.1);
+}
+
+/* 第四屏 */
+.fourth-info-title,
+.fourth-info{
+  transition: all 1s;
+}
+
+.fourth-info-title-init,
+.fourth-info-init{
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.fourth-info-title-done,
+.fourth-info-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+.fourth-img-item-1{
+  transition: all 1s .5s;
+}
+
+.fourth-img-item-2{
+  transition: all 1s 1s;
+}
+.fourth-img-item-3{
+  transition: all 1s 1.5s;
+}
+.fourth-img-item-4{
+  transition: all 1s 2s;
+}
+
+
+.fourth-img-item-1-init,
+.fourth-img-item-2-init,
+.fourth-img-item-3-init,
+.fourth-img-item-4-init{
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.fourth-img-item-1-done,
+.fourth-img-item-2-done,
+.fourth-img-item-3-done,
+.fourth-img-item-4-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* 第五屏 */
+.fifth-title,
+.fifth-info,
+.fifth-img{
+  transition: all 1s;
+}
+
+.fifth-title-init{
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+
+.fifth-info-init{
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.fifth-title-done,
+.fifth-info-done{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.fifth-img-init{
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fifth-img-done{
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* header */
+header{
+  transition: all 1s;
+}
+
+.header_active{
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.header_active a{
+  color: #fff;
+}
+
+.silder{
+  transition: all 1s;
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+
+.silder-active{
+  opacity: 1;
+  transform: translate(0, 0);
+}

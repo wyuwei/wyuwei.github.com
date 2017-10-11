@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=640, minimal-ui,user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<title>一汽奔腾</title>
+<link href="css/index.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = "http://www.evener.com/bo/jsphp/wx.php?url=" + encodeURIComponent(location.href.split('#')[0]);
+	document.getElementsByTagName('head')[0].appendChild(script); 
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="http://www.faw-benteng.com/tdrive/api/dealers.js.php"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?507518330954726b9594c15e54b2e542";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+	<header>
+		<h1 class="clearFix">
+			<div class="logo_left fl"></div>
+			<div class="logo_right fr"></div>
+		</h1>
+		<div class="home_text">
+			<div class="home_img">
+				<img src="images/home_text.png" alt="" />
+			</div>
+			<div class="text_content">
+				<p>观影霸王票随心享！</p>
+				<p>乐视、优酷、爱奇艺VIP名额限时送！</p>
+				<p>豪礼狂送，乐享不停！</p>
+			</div>
+		</div>
+		<div class="clearFix home_button">
+			<div class="home_btn start">
+				<img src="images/home_btn.png" alt="" />
+				<span>抢豪礼!</span>
+			</div>
+			<div class="home_btn">
+				<a id="sale_btn" onClick="_hmt.push(['_trackEvent', 'presell', 'click', 'B50', 'presell'])" href="http://mai.m.yiche.com/pb/173.html">
+					<img src="images/home_btn.png" alt="" />
+					<span>火热预售</span>
+				</a>
+			</div>
+		</div>
+		<p class="underway">现全新奔腾B50火爆预售进行中</p>
+		<div class="form">
+			<div class="clearFix">
+				<div class="fl form_box">
+					<select id="sheng" name="provinceid"></select>
+					<i></i>
+				</div>
+				<div class="fr form_box">
+					<select id="ddlCityID" name="cityid" ></select>
+					<i></i>
+				</div>
+			</div>
+			<div class="form_box">
+				<select name="shopid" class="impress" id="shop_1"></select>
+				<i></i>
+			</div>
+			<div class="form_box">
+				<select name="impress" class="impress">
+					<option>你对全新B50印象：</option>
+					<option>喜欢&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;准备购车</option>
+					<option>一般&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;考虑购车</option>
+					<option>不喜欢&nbsp;&nbsp;&nbsp;暂不购车</option>
+				</select>
+				<i></i>
+			</div>
+			<div class="clearFix">
+				<div class="fl form_box">
+					<input type="text" name="name" placeholder="请输入姓名" />
+				</div>
+				<div class="fr form_box">
+					<select name="sex">
+						<option>请选择性别</option>
+						<option>男</option>
+						<option>女</option>
+					</select>
+					<i></i>
+				</div>
+			</div>
+			<div class="form_box">
+				<input type="number" name="phone" class="phone" placeholder="请输入您的手机号" />
+			</div>
+			<span class="notice"></span>
+		</div>
+		<div class="button reward">
+			<img src="images/button.png" alt="" />
+			<span>立即抽奖!</span>
+		</div>
+		<div class="detail">查看活动规则</div>
+		<div class="detail_pos">
+			<div class="detail_text">
+				<p class="detail_tit clearFix"><span class="fl">抽奖机制<span></p>
+				<p>1.完善资料，即可获得三次抽奖机会</p>
+				<p>2.将游戏分享至朋友圈即可增加一次抽奖机会</p>
+				<p>3.每个手机号只有一次中奖机会</p>
+			</div>
+			<div class="detail_text">
+				<p class="detail_tit clearFix"><span class="fl">领取方式</span></p>
+				<p>获奖信息将有短信告知，请确保相关信息准确。</p>
+			</div>
+			<div class="explain">最终解释权归一汽奔腾所有</div>
+			<div class="closed"></div>
+		</div>
+	</header>
+	<footer>
+		<img src="images/car.png" alt="" />
+	</footer>
+	<div class="game">
+		<div class="game_box">
+			<img src="images/game_box.png" alt="" />
+			<div class="numbox">
+				<div class="num">
+				</div>
+				<div class="num">
+				</div>
+				<div class="num">
+				</div>
+			</div>
+		</div>
+		<div class="game_body">
+			<img src="images/game_body.png" alt="" />
+		</div>
+		<div class="play_box">
+			<div class="play_btn"></div>
+		</div>
+		<div class="arrow">
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+		<div class="game_text">
+			<img src="images/game_text.png" alt="" />
+		</div>
+	</div>
+	<div class="message">
+		<div class="msgs">很遗憾！</div>
+		<p>分享给好友，可再获得一次抽奖机会哦！</p>
+		<div class="wechat">点击右上角图标分享给好友<br/>即可获得额外抽奖机会</div>
+		<div class="giftbox">
+			<img src="images/tickit.png" alt="" />
+			<div class="gift_bot">电影票</div>
+		</div>
+		<div class="button again">
+			<img src="images/button.png" alt="" />
+			<span>再来一次</span>
+		</div>
+	</div>
+	<div class="msg_box">我们将发送激活码到您的手机，请注意查收！</div>
+	<div class="music play">
+		<audio src="images/music.mp3" preload="auto" autoplay loop></audio>
+	</div>
+	<div class="replay"></div>
+	<div class="stop"></div>
+</body>
+<script>
+window.onload = function () {
+    var oStop = document.querySelector('.stop');
+    var oRotate = document.querySelector('.music');
+    var oMusic = document.getElementsByTagName('audio')[0];
+    var oReplay = document.querySelector('.replay');
+    
+    //智能机浏览器版本信息:
+     
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端浏览器版本信息
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    };
+    if (browser.versions.android) {
+        var oFirst = document.createElement('div');
+        oFirst.className = 'firstplay';
+        document.documentElement.appendChild(oFirst);
+        oFirst.addEventListener('touchstart', function (e) {
+            oMusic.play();
+            e.preventDefault();
+            oFirst.style.display = 'none';
+        }, false);
+    }
+
+    oStop.addEventListener('touchstart', function (e) {
+        oMusic.pause();
+        oRotate.className = 'music';
+        oReplay.style.zIndex = 10;
+        e.preventDefault();
+    }, false);
+
+    oReplay.addEventListener('touchstart', function (e) {
+        oMusic.play();
+        oRotate.className = 'music play';
+        oReplay.style.zIndex = 9;
+        e.preventDefault();
+    }, false);
+};
+</script>
+</html>

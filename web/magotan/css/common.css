@@ -1,0 +1,13 @@
+@charset "utf-8";
+*{ margin:0; padding:0; }
+a{ text-decoration:none; color:#000; }
+li{ list-style:none; }
+img{ vertical-align:top; border:0; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+input,textarea,select{ outline:none; resize:none; vertical-align:middle;  -webkit-appearance:none; appearance:none; -moz-appearance:none; -ms-appearance:none; }
+html,body{ width:100%; }
+body{ font-family:"微软雅黑", "Microsoft YaHei",Tahoma, 宋体, arial, helvetica, clean, sans-serif; }
+.wrapper{ width:1246px; margin:0 auto; }

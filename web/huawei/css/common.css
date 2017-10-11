@@ -1,0 +1,11 @@
+@charset "utf-8";
+*{ margin:0; padding:0; }
+a{ text-decoration:none; color:#000; }
+li{ list-style:none; }
+img{ vertical-align:top; border:0; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+input,textarea{ outline:none; resize:none; vertical-align:middle; }
+html,body{ width:100%; }

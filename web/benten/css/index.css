@@ -1,0 +1,119 @@
+@charset "utf-8";
+*{ margin:0; padding:0; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+img{ border:0; vertical-align:top; }
+select,input{ vertical-align:top; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; display:block; clear:both; }
+html,body{ width:100%; height:100%; overflow:hidden; }
+body{ font-family:"Microsoft YaHei",Arial; -webkit-tap-highlight-color:rgba(255,255,255,0); position:relative; top:0; left:0; }
+
+/* header */
+h1{ padding:44px 48px 0 46px; }
+h1 .logo_left{ width:164px; height:33px; background:url(../images/logo_left.png) no-repeat; background-size:100%; }
+h1 .logo_right{ width:123px; height:37px; background:url(../images/logo_right.png) no-repeat; background-size:100%; }
+header{ width:100%; height:100%; background:url(../images/sky.jpg) no-repeat; background-size:100%; position:relative; top:0; left:0; overflow:hidden; }
+.home_text{ width:478px; position:absolute; top:150px; left:50%; margin-left:-239px; text-align:center; transition:1s all ease; -webkit-transition:1s all ease; }
+.home_img{ width:478px; height:169px; }
+.home_img img{ width:100%; height:100%; }
+.text_content{ margin-top:25px; }
+.text_content p{ font-size:21px; line-height:29px; color:#000; }
+
+.button{ width:351px; height:74px; margin:430px auto 0; position:relative; top:0; left:0; }
+.button img{ width:100%; height:100%; }
+.button span,.home_btn span{ position:absolute; top:0; left:0; width:100%; height:100%; text-align:center; color:#fff; font-size:34px; line-height:70px; }
+.home_button{ width:488px; margin:380px auto 0; height:70px; }
+.home_btn{ width:234px; height:70px; margin:0 5px; float:left; position:relative; top:0; left:0; }
+.home_btn img{ width:100%; height:100%; }
+.home_btn a{ display:block; width:100%; height:100%; }
+.underway{ font-size:21px; line-height:29px; color:#000; text-align:center; margin-top:20px; }
+.reward{ margin:600px auto 0; transform:translateY(500px); -webkit-transform:translateY(500px); transition:1s all ease; -webkit-transition:1s all ease; opacity: 0; }
+header.active .home_text{ transform:translateY(-50px); -webkit-transform:translateY(-50px);}
+header.active .text_content,header.active .home_button,header.active .underway{ display:none; }
+header.active .form,header.active .reward,header.active .detail{ transform:translateY(0); opacity:1;-webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); }
+
+.form{ width:510px; position:absolute; top:290px; left:50%; margin-left:-255px; -webkit-transform:translateY(500px); transform:translateY(500px); transition:1s all ease; opacity:0; -webkit-transition:1s all ease; }
+.form select,.form input{ -webkit-appearance:none; appearance:none; -moz-appearance:none; -ms-appearance:none; width:242px; height:62px; line-height:62px; border:2px solid #8992a0; border-radius:5px;display:block; outline:none; margin:6px 0; text-indent:1em; background:#fff; font-size:21px; }
+.form input{ height:58px; }
+.form .phone,.form .impress{ width:100%; }
+.form .phone{ box-sizing:border-box; line-height:57px; }
+.form_box{ position:relative; }
+.form_box i{ width:12px; height:8px; background:url(../images/arrow_down.jpg) no-repeat; background-size:100%; position:absolute; top:50%; margin-top:-4px; right:16px; }
+.notice{ color:#f00; text-align:right; font-size:20px; display:block; }
+.detail{ font-size:21px; color:#fff; position:relative; top:0; left:0; z-index:2; background:#000; border-radius:10px; width:180px; height:40px; line-height:40px; margin:20px auto 0; text-align:center; -webkit-transform:translateY(5px); transform:translateY(500px); transition:1s all ease; opacity:0; -webkit-transition:1s all ease; }
+.detail_pos{ width:376px; padding:20px 60px 0px 70px; height:200px; margin:20px auto 0; background:#fff; border-radius:10px; border:1px solid #c1c5d1; font-size:15px; position:relative; top:0; left:0; display:none; z-index:2; }
+.detail_text{ margin-bottom:15px; }
+.detail_tit span{ color:#fff; background:#000; text-align:center; border-radius:20px; padding:0 5px; }
+.explain{ width:376px; border-top:1px dotted #000; padding-top:10px; }
+.closed{ width:27px; height:26px; background:url(../images/close.jpg) no-repeat; background-size:100%; position:absolute; top:13px; right:13px; }
+
+footer{ width:100%; height:399px; position:absolute; bottom:0; left:0; transition:1s all ease; -webkit-transition:1s all ease; }
+footer img{ width:100%; height:100%; }
+footer.active{ bottom:-130px; }
+
+.game.active{ transform:translateY(-650px); -webkit-transform:translateY(-650px); -moz-transform:translateY(-650px); -ms-transform:translateY(-650px); opacity:1; }
+.game{ width:100%; height:769px; position:absolute; bottom:-700px; left:0; transition:1s all ease; opacity:0; -webkit-transition:1s all ease; transform:translateY(0px); -webkit-transform:translateY(0px); -moz-transform:translateY(0px); -ms-transform:translateY(0px); }
+.game_box{ width:609px; height:624px; position:absolute; top:0px; left:14px; z-index:2; }
+.game_box img,.game_body img,.game_text img{ width:100%; height:100%; }
+.game_body{ width:191px; height:368px; position:absolute; bottom:0; left:236px; }
+.play_box{ width:121px; height:273px; position:absolute; top:0; right:8px; z-index:3;-webkit-transform-style:preserve-3d; -webkit-transform-origin:left bottom; -webkit-transition:1s all ease; -webkit-transform:perspective(800px) rotateY(0deg); }
+.play_btn{ width:121px; height:273px; background:url(../images/play_btn.png) no-repeat; background-size:100%; position:absolute; top:0; right:8px; z-index:3; transform-origin: left bottom; }
+.play_box.active{ -webkit-transform:perspective(800px) rotateX(-40deg); -webkit-transform-origin: left bottom; }
+.arrow{ width:59px; height:77px; position:absolute; right:30px; top:301px; }
+.arrow i{ width:59px; height:35px; display:block; background:url(../images/down.png) no-repeat; background-size:100%; margin-bottom:-14px; }
+.game_text{ right:38px; width:48px; height:196px; position:absolute; top:411px; }
+.numbox{ position:absolute; height:300px; overflow:hidden; top:116px; left:56px; }
+
+.num{ width:115px; height:3000px; float:left; margin-left:20px; background:url(../images/gift_num.png) repeat-y top center; }
+
+
+.message{ width:100%; height:721px; background:url(../images/message_box.png) no-repeat; background-size:100%; position:absolute; left:0; bottom:120px; display:none; z-index:2; }
+.msgs{ font-size:81px; color:#f00; font-weight:bolder; text-shadow:2px 0 0 #fff; text-align:center; margin-top:130px; text-indent:0.5em; }
+.message p{ font-size:25px; text-align:center; margin-top:15px; }
+.wechat{ width:350px; font-size:25px; text-align:center; margin:60px auto 70px; }
+.wechat img{ width:100%; height:100%; }
+.again{ margin:0 auto; }
+.giftbox{ width:237px; height:179px; border-radius:10px; border:2px solid #5d636b; overflow:hidden; display:none; position:relative; top:0; left:0; margin:25px auto; text-align:center; }
+.giftbox img{ width:198px; height:74px; margin-top:30px; }
+.gift_bot{ background:#5d636b; position:absolute; bottom:0; left:0; width:237px; height:46px; font-size:28px; color:#fff; line-height:46px; }
+.message.active .wechat{ display:none; }
+.message.active .giftbox{ display:block; }
+.msg_box{ width: 310px; height:100px; padding:20px; background:rgba(0,0,0,0.5); border-radius:10px; color:#fff; font-size:30px; position:fixed; top:25%; left:50%; margin-left:-175px; line-height:40px; display:none; z-index:10; }
+
+
+/*音乐*/
+.music{ width:50px; height:50px; background:url(../images/music.png) no-repeat; background-size:100%; z-index:9; position:fixed; top:10px; right:10px; transition:1s all ease; -webkit-transition:1s all ease; -ms-transition:1s all ease; -moz-transition:1s all ease; }
+.stop,.replay{ width:50px; height:50px; z-index:9; position:fixed; top:10px; right:10px; }
+.play{ animation:rotate 1.2s linear infinite; -webkit-animation:rotate 1.2s linear infinite; -moz-animation:rotate 1.2s linear infinite; -ms-animation:rotate 1.2s linear infinite; }
+.firstplay{ width:100%; height:100%; background:#fff; position:fixed; z-index:99; top:0; left:0; opacity:0; }
+@keyframes rotate{0%{
+					-webkit-transform:rotate(0);
+					transform:rotate(0);
+					-moz-transform:rotate(0);
+					-ms-transform:rotate(0);
+					}
+					100%{
+						-webkit-transform:rotate(360deg);
+						-moz-transform:rotate(360deg);
+						-ms-transform:rotate(360deg);
+						transform:rotate(360deg);
+						}}
+@-webkit-keyframes rotate{
+					0%{
+					-webkit-transform:rotate(0)；
+					-ms-transform:rotate(0);
+					-moz-transform:rotate(0);
+					transform:rotate(0);
+					}
+					100%
+					{
+						-webkit-transform:rotate(360deg);
+						-moz-transform:rotate(360deg);
+						-ms-transform:rotate(360deg);
+						transform:rotate(360deg);
+					}}
+
+
+
