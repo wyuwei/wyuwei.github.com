@@ -6,8 +6,9 @@
     <title>My Website</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/active.css">
 </head>
 <body>
 <div class="main_wrapper" id="main">
@@ -16,15 +17,15 @@
         <nav class="nav_scroll" id="nav">
             <dl class="clearFix">
                 <dt class="logo"><a href="index.html">王雨微</a></dt>
-                <dd class="nav_list">
+                <dd class="nav_list" id="nav_list">
                     <a href="#item1" class="item1 active">首页</a>
                     <a href="#item2" class="item2">关于我</a>
                     <a href="#item3" class="item3">作品</a>
                     <a href="#item4" class="item4">个性案例</a>
                     <a href="#item5" class="item5">联系我</a>
-                    <a href="javascript:;" id="sideBar_trigger">
+                  <!--  <a href="javascript:;" id="sideBar_trigger">
                         <i class="fa fa-align-justify"></i>
-                    </a>
+                    </a>-->
                 </dd>
             </dl>
         </nav>
@@ -48,50 +49,50 @@
     <!-- content start -->
     <div class="container content">
         <div class="item">
-            <section class="green_section item" id="item2">
+            <section class="green_section item second" id="item2">
                 <div class="wrapper menu">
-                    <div>
-                        <h2>关于我</h2>
-                        <div class="hr"></div>
-                        <p class="sub_heading">作为一名90后中年人，一直在不断学习.</p>
+                    <div class="green_info">
+                        <h2 class="green_info_h2">关于我</h2>
+                        <div class="hr green_hr"></div>
+                        <p class="sub_heading green_sub_heading">作为一名90后中年人，一直在不断学习.</p>
                     </div>
                     <div class="icon_group">
-                        <div class="icon_box">
-                  					<span class="icon">
-                  						<i class="icon_i fa fa-desktop fa-4x"></i>
-                  					</span>
-                            <div class="icon_intro">
+                        <div class="icon_box icon_box_1">
+                            <span class="icon">
+                                <i class="icon_i fa fa-desktop fa-4x"></i>
+                            </span>
+                            <div class="icon_intro icon_intro_1">
                                 <h4>HTML + CSS</h4>
                                 熟练掌握html,css布局,了解W3C标准,深刻理解Web语义化
                             </div>
                         </div>
-                        <div class="icon_box">
-                					<span class="icon">
-                						<i class="icon_i fa fa-html5 fa-4x"></i>
-                					</span>
-                          <div class="icon_intro">
-                              <h4>H5 + CSS3</h4>
-                              熟练使用html5与css3技术开发,实现网站多元化与移动端技术
-                          </div>
+                        <div class="icon_box icon_box_2">
+                            <span class="icon">
+                                <i class="icon_i fa fa-html5 fa-4x"></i>
+                            </span>
+                            <div class="icon_intro icon_intro_2">
+                                <h4>H5 + CSS3</h4>
+                                熟练使用html5与css3技术开发,实现网站多元化与移动端技术
+                            </div>
                         </div>
-                        <div class="icon_box">
-                					<span class="icon">
-                						<i class="icon_i fa fa-lightbulb-o fa-4x"></i>
-                					</span>
-                            <div class="icon_intro">
+                        <div class="icon_box icon_box_3">
+                            <span class="icon">
+                                <i class="icon_i fa fa-lightbulb-o fa-4x"></i>
+                            </span>
+                            <div class="icon_intro icon_intro_3">
                                 <h4>JavaScript</h4>
                                 熟练使用原生javascript开发,使用各类插件库<br>
                                 熟悉Ajax/JSONP交互技术<br>
                                 理解MVC开发思想与面向对象编程思想
                             </div>
                         </div>
-                        <div class="icon_box">
-                					<span class="icon">
-                						<i class="icon_i fa fa-cogs fa-4x"></i>
-                					</span>
-                            <div class="icon_intro">
+                        <div class="icon_box icon_box_4">
+                            <span class="icon">
+                                <i class="icon_i fa fa-cogs fa-4x"></i>
+                            </span>
+                            <div class="icon_intro icon_intro_4">
                                 <h4>框架</h4>
-                                  了解VUE.JS的MVVM开发模式,应用nodejs/vue-cli/webpack等技术
+                                了解VUE.JS的MVVM开发模式,应用nodejs/vue-cli/webpack等技术
                             </div>
                         </div>
                     </div>
@@ -107,33 +108,35 @@
                 </div>
                 <ul id="ul1">
                     <li class="l2">
-                        <img src="img/pic7.jpg" alt="">
+                        <a href="web/intellistar/index.html" target="_blank"><img src="img/pic7.jpg" alt=""></a>
                     </li>
                     <li class="l1">
-                        <img src="img/newpic3.jpg" alt="">
+                        <a href="web/Phone/index.html" target="_blank"><img src="img/phone.jpg" alt=""></a>
                     </li>
                     <li class="center">
-                        <img src="img/pic8.jpg" alt="">
+                        <a href="web/gaofu/index.html" target="_blank"><img src="img/pic8.jpg" alt=""></a>
                     </li>
                     <li class="r1">
-                        <img src="img/newpic1.jpg" alt="">
+                        <a href="web/huawei/index.html" target="_blank"><img src="img/newpic1.jpg" alt=""></a>
                     </li>
                     <li class="r2">
-                      <img src="img/pic9.jpg" alt="">
+                        <a href="web/magotan/index.html" target="_blank"><img src="img/pic9.jpg" alt=""></a>
                     </li>
                     <li>
-                        <img src="img/newpic2.jpg" alt="">
+                        <a href="http://www.racing.allyes.com/" target="_blank"><img src="img/newpic2.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="web/school/index.html" target="_blank"><img src="img/school.jpg" alt=""></a>
                     </li>
                 </ul>
                 <div class="btn_group clearFix">
           				<span id="btn_prev" class="btn_prev">
           					<i class="fa fa-arrow-circle-left fa-3x"></i>
           				</span>
-                  <span id="btn_next" class="btn_next">
+                    <span id="btn_next" class="btn_next">
           					<i class="fa fa-arrow-circle-right fa-3x"></i>
           				</span>
                 </div>
-
             </div>
         </section>
         <section class="green_section item" id="item4">
@@ -201,7 +204,7 @@
                         </li>
                         <li>
                             <a href="approve/时钟.html" target="_blank">
-                                <img src="img/time.jpg" alt="倒计时" class="img">
+                                <img src="img/time2.jpg" alt="倒计时" class="img">
                                 <div class="mask"></div>
                                 <div class="rect"></div>
                                 <div class="words">
@@ -210,6 +213,40 @@
                                 </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="approve/无缝滚动.html" target="_blank">
+                                <img src="img/smls.jpg" alt="无缝滚动" class="img">
+                                <div class="mask"></div>
+                                <div class="rect"></div>
+                                <div class="words">
+                                    <h3>无缝滚动</h3>
+                                    <p>循环滚动展示照片的效果,运用到了HTML+JS</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve/网易幻灯片.html" target="_blank">
+                                <img src="img/slide.jpg" alt="幻灯片" class="img">
+                                <div class="mask"></div>
+                                <div class="rect"></div>
+                                <div class="words">
+                                    <h3>幻灯片</h3>
+                                    <p>网易幻灯片式展示照片的效果,运用到了HTML+JS</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve/CSS3/index.html" target="_blank">
+                                <img src="img/CSS3.jpg" alt="Css3" class="img">
+                                <div class="mask"></div>
+                                <div class="rect"></div>
+                                <div class="words">
+                                    <h3>CSS3动画</h3>
+                                    <p>运用CSS3动画效果</p>
+                                </div>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -227,21 +264,21 @@
                 <p>email: wyuwei404@gmail.com</p>
                 <p>个人简历: <a href="resume/index.html" target="_blank">戳我</a></p>
             </div>
-			<div>
-				<a href="web/CSS3/index.html" target="_blank"> slider </a>
-				<a href="web/gaofu/index.html" target="_blank"> gaofu </a>
-				<a href="web/huawei/index.html" target="_blank"> huawei </a>
-				<a href="web/Phone/index.html" target="_blank"> Phone </a>
-				<a href="web/yibo/index.html" target="_blank"> yibo </a>
-				
-				<a href="web/intellistar/index.html" target="_blank"> intellistar </a>
-				<a href="web/bentcircle/index.html" target="_blank"> bentcircle </a> 
-				<a href="web/benten/index.html" target="_blank"> benten </a>
-				<a href="web/bentx80/index.html" target="_blank"> bentx80 </a>
-				<a href="web/magotan/index.html" target="_blank"> magotan </a>
-				<a href="web/tempo/index.html" target="_blank"> tempo </a>
-				<a href="web/elm_vue/index.html" target="_blank"> elm_vue </a>
-			</div>
+            <!--<div>
+                <a href="web/CSS3/index.html" target="_blank"> slider </a>
+                <a href="web/gaofu/index.html" target="_blank"> gaofu </a>
+                <a href="web/huawei/index.html" target="_blank"> huawei </a>
+                <a href="web/Phone/index.html" target="_blank"> Phone </a>
+                <a href="web/yibo/index.html" target="_blank"> yibo </a>
+
+                <a href="web/intellistar/index.html" target="_blank"> intellistar </a>
+                <a href="web/bentcircle/index.html" target="_blank"> bentcircle </a>
+                <a href="web/benten/index.html" target="_blank"> benten </a>
+                <a href="web/bentx80/index.html" target="_blank"> bentx80 </a>
+                <a href="web/magotan/index.html" target="_blank"> magotan </a>
+                <a href="web/tempo/index.html" target="_blank"> tempo </a>
+                <a href="web/elm_vue/index.html" target="_blank"> elm_vue </a>
+            </div>-->
         </div>
     </div>
     <!-- call me end-->
@@ -272,6 +309,22 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/index.js"></script>
 <script>
+    /* 添加init样式 */
+    function setScreenInit(cls) {
+        var screen = $(cls);
+        var animateElement = screenAnimateElements[cls];
+
+        for (var i = 0; i < animateElement.length; i++) {
+            var element = $(animateElement[i]);
+            var baseCls = element.attr('class');
+            element.attr('class', baseCls + ' ' + animateElement[i].substr(1) + '_init');
+        }
+    }
+    window.onload = function () {
+        for (var key in screenAnimateElements) {
+            setScreenInit(key);
+        }
+    };
 </script>
 </body>
 </html>

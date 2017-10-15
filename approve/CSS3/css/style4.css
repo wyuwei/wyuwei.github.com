@@ -1,0 +1,132 @@
+.bg-img div span{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
+  transition: scale 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.bg-img div:nth-child(1){
+  transform: scale(1);
+}
+
+.img-container input.select-img-1:checked ~ .bg-img,
+.bg-img div span:nth-child(1){
+  background: url(../images/1.jpg);
+}
+
+.img-container input.select-img-2:checked ~ .bg-img,
+.bg-img div span:nth-child(2){
+  background: url(../images/2.jpg);
+}
+
+.img-container input.select-img-3:checked ~ .bg-img,
+.bg-img div span:nth-child(3){
+  background: url(../images/3.jpg);
+}
+
+.img-container input.select-img-4:checked ~ .bg-img,
+.bg-img div span:nth-child(4){
+  background: url(../images/4.jpg);
+}
+
+.bg-img div:nth-child(1) span{
+  background-position: 0 0;
+}
+
+.bg-img div:nth-child(2) span{
+  background-position: -150px 0;
+}
+
+.bg-img div:nth-child(3) span{
+  background-position: -300px 0;
+}
+
+.bg-img div:nth-child(4) span{
+  background-position: -450px 0;
+}
+
+.img-container input:checked ~ .bg-img div span{
+  animation: scaleOut .6s ease-in-out;
+}
+
+@keyframes scaleOut {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.img-container input.select-img-1:checked ~ .bg-img div span:nth-child(1),
+.img-container input.select-img-2:checked ~ .bg-img div span:nth-child(2),
+.img-container input.select-img-3:checked ~ .bg-img div span:nth-child(3),
+.img-container input.select-img-4:checked ~ .bg-img div span:nth-child(4){
+  transform: scale(1);
+  z-index: 999;
+  animation: none;
+}
+
+.bg-titles h3{
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.bg-titles h3 span{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+}
+
+.bg-titles h3 span:nth-child(1){
+  left: 0;
+  font-size: 70px;
+  font-family: "BebasNeue", "Arial Narrow", Arial sans-serif;
+  letter-spacing: 7px;
+  color: transparent;
+	text-shadow: 0px 0px 10px #fff;
+  transition: all .8s ease-in-out;
+}
+
+.bg-titles h3 span:nth-child(2){
+  font-size: 14px;
+  margin-top: 84px;
+  padding: 10px 0;
+  background: rgba(104, 171, 194, .9);
+  font-family: Cambria, Palatino, "Palation Linotype", "Palatino LT STD";
+  letter-spacing: 0;
+  font-style: italic;
+  transition: all .5s ease-in-out;
+}
+
+.img-container input:checked ~ .bg-titles h3 span {
+  opacity: 0;
+	text-shadow: 0px 0px 30px #fff;
+}
+
+.img-container input.select-img-1:checked ~ .bg-titles h3:nth-child(1) span:nth-child(1),
+.img-container input.select-img-2:checked ~ .bg-titles h3:nth-child(2) span:nth-child(1),
+.img-container input.select-img-3:checked ~ .bg-titles h3:nth-child(3) span:nth-child(1),
+.img-container input.select-img-4:checked ~ .bg-titles h3:nth-child(4) span:nth-child(1){
+  opacity: 1;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.img-container input.select-img-1:checked ~ .bg-titles h3:nth-child(1) span:nth-child(2),
+.img-container input.select-img-2:checked ~ .bg-titles h3:nth-child(2) span:nth-child(2),
+.img-container input.select-img-3:checked ~ .bg-titles h3:nth-child(3) span:nth-child(2),
+.img-container input.select-img-4:checked ~ .bg-titles h3:nth-child(4) span:nth-child(2){
+  opacity: 1;
+}

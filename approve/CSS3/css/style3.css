@@ -1,0 +1,137 @@
+.bg-img div span{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 400px;
+  z-index: 2;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  transition: all .2s ease-in-out;
+}
+
+.bg-img div:nth-child(even) span{
+  top: -400px;
+}
+
+.img-container input.select-img-1:checked ~ .bg-img,
+.bg-img div span:nth-child(1){
+  background: url(../images/1.jpg);
+}
+
+.img-container input.select-img-2:checked ~ .bg-img,
+.bg-img div span:nth-child(2){
+  background: url(../images/2.jpg);
+}
+
+.img-container input.select-img-3:checked ~ .bg-img,
+.bg-img div span:nth-child(3){
+  background: url(../images/3.jpg);
+}
+
+.img-container input.select-img-4:checked ~ .bg-img,
+.bg-img div span:nth-child(4){
+  background: url(../images/4.jpg);
+}
+
+.bg-img div:nth-child(1) span{
+  background-position: 0 0;
+}
+
+.bg-img div:nth-child(2) span{
+  background-position: -150px 0;
+}
+
+.bg-img div:nth-child(3) span{
+  background-position: -300px 0;
+}
+
+.bg-img div:nth-child(4) span{
+  background-position: -450px 0;
+}
+
+.img-container input:checked ~ .bg-img div span{
+  animation: slideOutUp 0.6s ease-in-out;
+}
+
+.img-container input:checked ~ .bg-img div:nth-child(even) span{
+  animation: slideOutDown 0.6s ease-in-out;
+}
+
+@keyframes slideOutUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+.img-container input.select-img-1:checked ~ .bg-img div span:nth-child(1),
+.img-container input.select-img-2:checked ~ .bg-img div span:nth-child(2),
+.img-container input.select-img-3:checked ~ .bg-img div span:nth-child(3),
+.img-container input.select-img-4:checked ~ .bg-img div span:nth-child(4){
+  z-index: 10;
+  top: 0;
+  animation: none;
+}
+
+.bg-titles h3{
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.bg-titles h3 span{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	text-align: center;
+	opacity: 0;
+  z-index: 999;
+}
+
+.bg-titles h3 span:nth-child(1){
+  top: 15%;
+  font-size: 70px;
+  font-family: "BebasNeue", "Arial Narrow", Arial sans-serif;
+  letter-spacing: 7px;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+
+.bg-titles h3 span:nth-child(2){
+  top: 50%;
+  margin-top: 84px;
+  padding: 10px 0;
+  background: rgba(104, 171, 194, .9);
+  font-size: 14px;
+  font-family: Cambria, Palatino, "Palation Linotype", "Palatino LT STD";
+  letter-spacing: 0;
+  font-style: italic;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.img-container input.select-img-1:checked ~ .bg-titles h3:first-child span:nth-child(1),
+.img-container input.select-img-2:checked ~ .bg-titles h3:nth-child(2) span:nth-child(1),
+.img-container input.select-img-3:checked ~ .bg-titles h3:nth-child(3) span:nth-child(1),
+.img-container input.select-img-4:checked ~ .bg-titles h3:nth-child(4) span:nth-child(1){
+  top: 50%;
+  opacity: 1;
+}
+
+.img-container input.select-img-1:checked ~ .bg-titles h3:first-child span:nth-child(2),
+.img-container input.select-img-2:checked ~ .bg-titles h3:nth-child(2) span:nth-child(2),
+.img-container input.select-img-3:checked ~ .bg-titles h3:nth-child(3) span:nth-child(2),
+.img-container input.select-img-4:checked ~ .bg-titles h3:nth-child(4) span:nth-child(2){
+  opacity: 1;
+}

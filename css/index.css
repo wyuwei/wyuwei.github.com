@@ -1,76 +1,35 @@
 /*common st*/
-h1, h2, h3, h4, h5, h6 {
-    line-height: 100%;
-    margin: 0;
-}
+h1, h2, h3, h4, h5, h6 {line-height: 100%; margin: 0;  }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
+a {text-decoration: none;color: #fff;  }
 
-ul {
-    list-style: none;
-}
+ul {list-style: none; }
 
-h1 {
-    padding: 12px;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}
+h1 {padding: 12px;border-top: 2px solid #fff;border-bottom: 2px solid #fff; }
 
-.fl {
-    float: left;}
+.fl {float: left;}
 
-.fr {
-    float: right;
-}
+.fr {float: right;  }
 
-.clearFix:after {
-    display: block;
-    content: '';
-    clear: both;
-}
+.clearFix:after {display: block;content: '';clear: both;  }
 
-.clearFix {
-    zoom: 1
-}
+.clearFix {zoom: 1  }
 
-.article h1 {
-    border: none;
-}
+.article h1 {border: none;  }
 
-.active {
-    border-bottom: 4px solid #fff;
-}
+.active {border-bottom: 4px solid #fff;  }
 
-h2 {
-    font-size: 30px;
-}
+h2 {font-size: 30px;  }
 
-h3 {
-    font-size: 24px;
-}
+h3 {font-size: 24px;  }
 
-.hr {
-    width: 100%;
-    height: 2px;
-    margin: 20px auto;
-}
+.hr {width: 100%;height: 2px;margin: 20px auto;  }
 
-p {
-    font-size: 18px;
-    letter-spacing: 1px;
-}
+p {font-size: 18px;letter-spacing: 1px;  }
 
-.sub_heading {
-    font-size: 18px;
-    margin: 20px 0;
-}
+.sub_heading {font-size: 18px;margin: 20px 0;  }
 
-header {
-    background: rgba(0, 0, 0, 0.4);
-}
+header {background: rgba(0, 0, 0, 0.4);  }
 
 .btn {
     border: none;
@@ -98,7 +57,6 @@ nav dl dd, nav dl dt {
     line-height: 50px;
 }
 
-
 nav dl a {
     display: inline-block;
     height: inherit;
@@ -125,9 +83,11 @@ nav dl dt.logo {
     top: 0;
     background: rgb(131, 133, 135);
     z-index: 999;
-    -webkit-transition: .5 all ease;
-    -o-transition: .5 all ease;
-    transition: .5 all ease;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
 
 .logo a {
@@ -196,7 +156,11 @@ nav dl dt.logo {
 }
 
 .btn_box {
-    transition: all 0.5 ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     perspective: 500px;
 }
 
@@ -615,7 +579,7 @@ footer h2 {
     padding-bottom: 10px;
 }
 body{
-    background: #444 url('../img/banner.jpg') no-repeat center center;
+    background: url('../img/banner.jpg') center center #444;
     background-attachment: fixed;
 }
 .main_wrapper {
